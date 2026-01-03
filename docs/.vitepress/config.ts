@@ -1,4 +1,15 @@
-import { defineConfig } from 'vitepress';
+import { defineConfig, postcssIsolateStyles } from 'vitepress';
+
+// Badge HTML helper
+function BadgeHTML(text: string, type: 'new' | 'updated' | 'beta' = 'new') {
+  const classMap = {
+    new: 'vp-badge-new',
+    updated: 'vp-badge-updated',
+    beta: 'vp-badge-updated',
+  };
+  
+  return `<span class="${classMap[type]}">${text}</span>`;
+}
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -77,29 +88,30 @@ export default defineConfig({
             text: 'Components',
             items: [
               { text: 'Overview', link: '/components/' },
-              { text: 'Button', link: '/components/button' },
-              { text: 'Input', link: '/components/input' },
-              { text: 'Textarea', link: '/components/textarea' },
-              { text: 'RadioGroup', link: '/components/radio-group' },
-              { text: 'Button Group', link: '/components/button-group' },
-              { text: 'Badge', link: '/components/badge' },
-              { text: 'Kbd', link: '/components/kbd' },
-              { text: 'Breadcrumb', link: '/components/breadcrumb' },
-              { text: 'Pagination', link: '/components/pagination' },
-              { text: 'Skeleton', link: '/components/skeleton' },
-              { text: 'Divider', link: '/components/divider' },
-              { text: 'Icon', link: '/components/icon' },
+              { text: 'Accordion', link: '/components/accordion' },
               { text: 'Alert', link: '/components/alert' },
               { text: 'AspectRatio', link: '/components/aspect-ratio' },
-              { text: 'Accordion', link: '/components/accordion' },
-              { text: 'Tabs', link: '/components/tabs' },
+              { text: `Avatar ${BadgeHTML('New', 'new')}`, link: '/components/avatar' },
+              { text: `Badge ${BadgeHTML('Updated', 'updated')}`, link: '/components/badge' },
+              { text: 'Breadcrumb', link: '/components/breadcrumb' },
+              { text: 'Button', link: '/components/button' },
+              { text: 'Button Group', link: '/components/button-group' },
               { text: 'Calendar', link: '/components/calendar' },
+              { text: 'Comparison', link: '/components/comparison' },
+              { text: 'Divider', link: '/components/divider' },
+              { text: `Icon ${BadgeHTML('New', 'new')}`, link: '/components/icon' },
+              { text: 'Input', link: '/components/input' },
+              { text: 'Kbd', link: '/components/kbd' },
+              { text: 'Pagination', link: '/components/pagination' },
+              { text: 'Progress', link: '/components/progress' },
+              { text: 'Range', link: '/components/range' },
+              { text: `RadioGroup ${BadgeHTML('New', 'new')}`, link: '/components/radio-group' },
+              { text: 'Rating', link: '/components/rating' },
+              { text: 'Skeleton', link: '/components/skeleton' },
               { text: 'Stepper', link: '/components/stepper' },
               { text: 'Switch', link: '/components/switch' },
-              { text: 'Range', link: '/components/range' },
-              { text: 'Rating', link: '/components/rating' },
-              { text: 'Progress', link: '/components/progress' },
-              { text: 'Comparison', link: '/components/comparison' },
+              { text: 'Tabs', link: '/components/tabs' },
+              { text: 'Textarea', link: '/components/textarea' },
               { text: 'Tooltip', link: '/components/tooltip' },
               { text: 'Tour', link: '/components/tour' },
             ],
@@ -148,29 +160,30 @@ export default defineConfig({
             text: 'Компоненты',
             items: [
               { text: 'Обзор', link: '/ru/components/' },
-              { text: 'Button', link: '/ru/components/button' },
-              { text: 'Input', link: '/ru/components/input' },
-              { text: 'Textarea', link: '/ru/components/textarea' },
-              { text: 'RadioGroup', link: '/ru/components/radio-group' },
-              { text: 'Button Group', link: '/ru/components/button-group' },
-              { text: 'Badge', link: '/ru/components/badge' },
-              { text: 'Kbd', link: '/ru/components/kbd' },
-              { text: 'Breadcrumb', link: '/ru/components/breadcrumb' },
-              { text: 'Pagination', link: '/ru/components/pagination' },
-              { text: 'Skeleton', link: '/ru/components/skeleton' },
-              { text: 'Divider', link: '/ru/components/divider' },
-              { text: 'Icon', link: '/ru/components/icon' },
+              { text: 'Accordion', link: '/ru/components/accordion' },
               { text: 'Alert', link: '/ru/components/alert' },
               { text: 'AspectRatio', link: '/ru/components/aspect-ratio' },
-              { text: 'Accordion', link: '/ru/components/accordion' },
-              { text: 'Tabs', link: '/ru/components/tabs' },
+              { text: `Avatar ${BadgeHTML('Новый', 'new')}`, link: '/ru/components/avatar' },
+              { text: `Badge ${BadgeHTML('Обновлен', 'updated')}`, link: '/ru/components/badge' },
+              { text: 'Breadcrumb', link: '/ru/components/breadcrumb' },
+              { text: 'Button', link: '/ru/components/button' },
+              { text: 'Button Group', link: '/ru/components/button-group' },
               { text: 'Calendar', link: '/ru/components/calendar' },
+              { text: 'Comparison', link: '/ru/components/comparison' },
+              { text: 'Divider', link: '/ru/components/divider' },
+              { text: `Icon ${BadgeHTML('Новый', 'new')}`, link: '/ru/components/icon' },
+              { text: 'Input', link: '/ru/components/input' },
+              { text: 'Kbd', link: '/ru/components/kbd' },
+              { text: 'Pagination', link: '/ru/components/pagination' },
+              { text: 'Progress', link: '/ru/components/progress' },
+              { text: 'Range', link: '/ru/components/range' },
+              { text: `RadioGroup ${BadgeHTML('Новый', 'new')}`, link: '/ru/components/radio-group' },
+              { text: 'Rating', link: '/ru/components/rating' },
+              { text: 'Skeleton', link: '/ru/components/skeleton' },
               { text: 'Stepper', link: '/ru/components/stepper' },
               { text: 'Switch', link: '/ru/components/switch' },
-              { text: 'Range', link: '/ru/components/range' },
-              { text: 'Rating', link: '/ru/components/rating' },
-              { text: 'Progress', link: '/ru/components/progress' },
-              { text: 'Comparison', link: '/ru/components/comparison' },
+              { text: 'Tabs', link: '/ru/components/tabs' },
+              { text: 'Textarea', link: '/ru/components/textarea' },
               { text: 'Tooltip', link: '/ru/components/tooltip' },
               { text: 'Tour', link: '/ru/components/tour' },
             ],
@@ -209,6 +222,16 @@ export default defineConfig({
     footer: {
       message: 'Released under the MIT License.',
       copyright: 'Copyright © 2025-present Alexander Zhukov',
+    },
+  },
+
+  vite: {
+    css: {
+      postcss: {
+        plugins: [
+          postcssIsolateStyles({ includeFiles: [/vp-doc\.css/] }),
+        ],
+      },
     },
   },
 });

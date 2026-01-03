@@ -54,3 +54,4 @@ import './components/capsule-sidebar/register.js';
 // Import all modules
 import './modules/form/index.js';
 import './components/capsule-icon/register.js';
+import './components/capsule-avatar/register.js';

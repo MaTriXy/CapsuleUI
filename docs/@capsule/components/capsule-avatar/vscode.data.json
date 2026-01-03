@@ -1,0 +1,20 @@
+{
+  "version": 1.1,
+  "tags": [
+    {
+      "name": "capsule-avatar",
+      "attributes": []
+    },
+    {
+      "name": "capsule-avatar-fallback",
+      "attributes": [
+        {
+          "name": "delay-ms",
+          "description": "Delay in milliseconds before showing the fallback",
+          "values": []
+        }
+      ]
+    }
+  ]
+}
+

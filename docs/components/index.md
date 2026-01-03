@@ -27,6 +27,7 @@ CapsuleUI provides a collection of modern, unstyled web components that you can 
 
 ### Data Display
 
+- **[Avatar](/components/avatar)** - A circular avatar component with fallback support
 - **[Badge](/components/badge)** - A badge component
 - **[Rating](/components/rating)** - A rating component
 - **[Divider](/components/divider)** - A divider component
